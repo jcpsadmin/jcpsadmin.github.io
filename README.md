@@ -3,7 +3,7 @@
 **Application Support Engineer**  
 Porto, Portugal · [LinkedIn](https://www.linkedin.com/in/jpintosilva) · [CV (PDF)](Jose_Silva_CV.pdf)
 
-Application Support Engineer with 20+ years in technical support, service desk and IT operations. At Siemens, I work alongside a development team on a customer-facing application, investigating incidents through SQL, database analysis and REST API troubleshooting. I turn technical evidence into clear findings for engineering teams and bring experience in critical incident response across complex environments.
+Application Support Engineer with 20+ years in technical support, service desk and IT operations. At Siemens, I work alongside a development team on a customer-facing application, investigating incidents through SQL, database analysis and REST API troubleshooting. I turn technical evidence into clear findings for engineering teams and bring experience in critical incident response across complex environments. As project Security Champion, I manage certificates, including creation, renewal and revocation.
 
 I am targeting L2/L3 Application Support, Production Support and DevOps-oriented roles, while building practical skills through a self-hosted Go and SQLite operations portal and continued training in Linux, cloud, cybersecurity and AI.
 
@@ -21,6 +21,7 @@ I am targeting L2/L3 Application Support, Production Support and DevOps-oriented
 ## Experience
 
 - **Siemens** — Application Support Engineer (Jul 2024–present)
+  - Project Security Champion: manage project certificate creation, renewal and revocation.
 - **FARFETCH** — Service Desk Analyst (Mar 2019–Jul 2024)
 - **Sage** — Technical Support Agent (Feb 2013–Mar 2019)
 - **Fundação Paulo Valada** — IT Support (2011–2012)
