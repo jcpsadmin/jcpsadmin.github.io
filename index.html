@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>José Silva — IT Operations Engineer, moving into DevOps</title>
+<meta name="description" content="CV of José Silva: 20+ years in technical support and application support, now moving into DevOps. Porto, Portugal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #16222e;
+    --muted: #57677a;
+    --paper: #f4f6f8;
+    --panel: #ffffff;
+    --line: #d5dce3;
+    --accent: #0e7c86;
+    --accent-ink: #ffffff;
+    --seg: #3b4d5f;
+    --head: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #e6edf3;
+      --muted: #9aabbb;
+      --paper: #0f1720;
+      --panel: #16212c;
+      --line: #263543;
+      --accent: #37b8c4;
+      --accent-ink: #0f1720;
+      --seg: #5d7286;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 56px 24px 72px; }
+
+  /* Header */
+  h1 {
+    font-family: var(--head);
+    font-weight: 700;
+    font-size: clamp(2.6rem, 8vw, 4.25rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin: 0 0 12px;
+  }
+  .role { font-family: var(--head); font-weight: 500; font-size: 1.3rem; margin: 0 0 4px; }
+  .role span { color: var(--accent); }
+  .place { color: var(--muted); margin: 0 0 24px; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+  .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--panel);
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.975rem;
+  }
+  .btn:hover { border-color: var(--accent); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+
+  /* Career bar */
+  .career { margin: 48px 0 8px; }
+  .career h2 { margin-bottom: 14px; }
+  .bar { display: flex; height: 34px; gap: 2px; }
+  .bar div {
+    min-width: 0;
+    background: var(--seg);
+    border-radius: 3px;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .bar .now { background: var(--accent); color: var(--accent-ink); }
+  .bar .gap { background: transparent; border: 1px dashed var(--line); }
+  .axis { display: flex; justify-content: space-between; color: var(--muted); font-size: 0.85rem; margin-top: 6px; }
+  .career p { color: var(--muted); font-size: 0.95rem; margin: 10px 0 0; }
+
+  /* Sections */
+  section { margin-top: 44px; }
+  h2 {
+    font-family: var(--head);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: -0.01em;
+    margin: 0 0 16px;
+  }
+  .lead { max-width: 68ch; margin: 0; }
+
+  .job { display: grid; grid-template-columns: 170px 1fr; gap: 6px 28px; padding: 22px 0; border-top: 1px solid var(--line); }
+  .job:last-child { border-bottom: 1px solid var(--line); }
+  .when { color: var(--muted); font-size: 0.95rem; padding-top: 2px; }
+  .job h3 { font-family: var(--head); font-weight: 500; font-size: 1.2rem; margin: 0; }
+  .job .org { color: var(--accent); font-weight: 600; margin: 0 0 8px; }
+  .job .org small { color: var(--muted); font-weight: 400; font-size: 0.95rem; }
+  ul.tight { margin: 0; padding-left: 1.15rem; }
+  ul.tight li { margin-bottom: 5px; padding-left: 2px; }
+  ul.tight li::marker { color: var(--accent); }
+
+  .project { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 22px 24px; }
+  .project h3 { font-family: var(--head); font-weight: 500; font-size: 1.2rem; margin: 0 0 2px; }
+  .project .stack { color: var(--muted); margin: 0 0 12px; font-size: 0.95rem; }
+
+  dl.skills { margin: 0; display: grid; grid-template-columns: 200px 1fr; gap: 10px 28px; }
+  dl.skills dt { font-weight: 600; }
+  dl.skills dd { margin: 0; }
+
+  .certs { list-style: none; margin: 0; padding: 0; }
+  .certs li { display: flex; justify-content: space-between; gap: 20px; padding: 7px 0; border-bottom: 1px solid var(--line); }
+  .certs li span:last-child { color: var(--muted); white-space: nowrap; font-size: 0.95rem; }
+
+  footer { margin-top: 56px; color: var(--muted); font-size: 0.9rem; }
+
+  @media (max-width: 640px) {
+    .wrap { padding: 36px 20px 56px; }
+    .job { grid-template-columns: 1fr; }
+    dl.skills { grid-template-columns: 1fr; gap: 2px; }
+    dl.skills dd { margin-bottom: 12px; }
+    .bar div { font-size: 0; padding: 0; }
+    .certs li { flex-direction: column; gap: 0; }
+  }
+  @media print {
+    :root { --paper: #fff; --panel: #fff; --ink: #000; --muted: #444; --line: #bbb; }
+    .links, footer { display: none; }
+    .wrap { padding: 0; }
+    section { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <header>
+    <h1>José Silva</h1>
+    <p class="role">IT Operations Engineer <span>&middot;</span> Application Support L2/L3 <span>&middot;</span> Moving into DevOps</p>
+    <p class="place">Porto, Portugal</p>
+    <ul class="links">
+      <li><a class="btn primary" href="Jose_Silva_CV_DevOps.pdf">Download CV (PDF)</a></li>
+      <li><a class="btn" href="https://www.linkedin.com/in/jpintosilva">LinkedIn</a></li>
+      <li><a class="btn" href="mailto:jp09061979@gmail.com">Email</a></li>
+    </ul>
+  </header>
+
+  <div class="career" role="img" aria-label="Career timeline from 2001 to 2026: DHV help desk 2001 to 2011, Sage technical support 2013 to 2019, Farfetch service desk 2019 to 2024, Siemens IT support engineer 2024 to present.">
+    <h2>25 years in IT operations</h2>
+    <div class="bar" aria-hidden="true">
+      <div style="flex: 10 1 0" title="DHV, 2001–2011">DHV</div>
+      <div class="gap" style="flex: 2.1 1 0"></div>
+      <div style="flex: 6.1 1 0" title="Sage, 2013–2019">Sage</div>
+      <div style="flex: 5.35 1 0" title="Farfetch, 2019–2024">Farfetch</div>
+      <div class="now" style="flex: 2.2 1 0" title="Siemens, 2024–present">Siemens</div>
+    </div>
+    <div class="axis" aria-hidden="true"><span>2001</span><span>2011</span><span>2019</span><span>Now</span></div>
+  </div>
+
+  <section aria-labelledby="summary">
+    <h2 id="summary">Summary</h2>
+    <p class="lead">I have spent 20+ years in technical support, service desk and application support. At Siemens I work alongside a development team on a customer application, investigating incidents with SQL and REST APIs, and turning what I find into clear next steps for developers.</p>
+    <p class="lead" style="margin-top:12px">I am now moving into DevOps. I built and deployed my own Go and SQLite web application on Windows Server, and I am completing training in Linux, cloud computing, cybersecurity and AI. I am looking for a DevOps, Platform or Production Support Engineer role.</p>
+  </section>
+
+  <section aria-labelledby="experience">
+    <h2 id="experience">Experience</h2>
+
+    <article class="job">
+      <div class="when">Jul 2024 – Present</div>
+      <div>
+        <h3>Information Technology Support Engineer</h3>
+        <p class="org">Siemens <small>Porto, Portugal</small></p>
+        <ul class="tight">
+          <li>Provide L2/L3-style application support in close collaboration with a development team on a customer application.</li>
+          <li>Investigate incidents end to end using system information, logs, databases and SQL queries to identify root causes.</li>
+          <li>Analyse application behaviour through REST API troubleshooting and API testing.</li>
+          <li>Communicate findings clearly to developers and technical teams, supporting faster incident resolution.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div class="when">Mar 2019 – Jul 2024</div>
+      <div>
+        <h3>Service Desk Analyst</h3>
+        <p class="org">FARFETCH <small>Porto, Portugal</small></p>
+        <ul class="tight">
+          <li>Supported a complex, high-availability e-commerce technology environment, handling incidents and service requests.</li>
+          <li>Worked with application and infrastructure teams to investigate problems and drive resolution.</li>
+          <li>Took part in critical incident response and cross-team troubleshooting.</li>
+          <li>Managed user provisioning, account management and access-related activities in Jira and Zendesk workflows.</li>
+          <li>Onboarded and mentored new team members.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div class="when">Feb 2013 – Mar 2019</div>
+      <div>
+        <h3>Technical Support Agent</h3>
+        <p class="org">SAGE <small>Portugal</small></p>
+        <ul class="tight">
+          <li>Delivered technical support and troubleshooting for customers using SAGE software and services.</li>
+          <li>Diagnosed application issues systematically and escalated complex cases with clear technical detail.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div class="when">2001 – 2011</div>
+      <div>
+        <h3>Help Desk</h3>
+        <p class="org">DHV <small>Portugal</small></p>
+        <ul class="tight">
+          <li>Provided IT help desk support: hardware, software and user issues across the IT environment.</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <section aria-labelledby="projects">
+    <h2 id="projects">Project</h2>
+    <div class="project">
+      <h3>CIP Ops Portal</h3>
+      <p class="stack">Self-hosted operations portal. Go, SQLite, HTML/CSS/JS, IIS on Windows Server.</p>
+      <ul class="tight">
+        <li>Built a full-stack web application from scratch: Go backend, SQLite database and vanilla JavaScript frontend, with six pages and a theming system.</li>
+        <li>Deployed behind IIS with HttpPlatformHandler; configured application pool identity, always-running start mode and absolute-path settings.</li>
+        <li>Diagnosed real deployment failures (a CGO/SQLite driver crash with no console, whitespace in environment variables, IIS configuration errors) and documented the fixes.</li>
+      </ul>
+      <!-- Quando publicares o repositório, acrescenta aqui: <p><a href="https://github.com/O-TEU-UTILIZADOR/cip-ops-portal">View on GitHub</a></p> -->
+    </div>
+  </section>
+
+  <section aria-labelledby="skills">
+    <h2 id="skills">Skills</h2>
+    <dl class="skills">
+      <dt>Operations and support</dt>
+      <dd>Application Support (L2/L3), Incident Management, Root Cause Analysis, Critical Incident Response, Service Desk</dd>
+      <dt>Databases and APIs</dt>
+      <dd>SQL, Cassandra, REST APIs, Postman, API Testing, OAuth 2.0, Identity API Management</dd>
+      <dt>Systems</dt>
+      <dd>Linux administration, Windows, Windows Server and IIS, Active Directory, Networking</dd>
+      <dt>Development and delivery</dt>
+      <dd>Go, JavaScript, Angular (foundations), GitLab, Agile, Scrum</dd>
+      <dt>Tools</dt>
+      <dd>Jira, Zendesk, Postman, GitLab</dd>
+      <dt>Cloud and AI</dt>
+      <dd>Cloud Computing (core concepts), Generative AI, Large Language Models, Anthropic API</dd>
+    </dl>
+  </section>
+
+  <section aria-labelledby="certs">
+    <h2 id="certs">Certifications and training</h2>
+    <ul class="certs">
+      <li><span>AI Fundamentals — Google</span><span>Sep 2026</span></li>
+      <li><span>Cloud Computing: Understanding Core Concepts — LinkedIn</span><span>Jun 2026</span></li>
+      <li><span>Tools of the Trade: Linux and SQL — Google</span><span>Mar 2025</span></li>
+      <li><span>Assets, Threats, and Vulnerabilities — Google</span><span>Mar 2025</span></li>
+      <li><span>Connect and Protect: Networks and Network Security — Google</span><span>Feb 2025</span></li>
+      <li><span>Foundations of Cybersecurity; Play It Safe: Manage Security Risks — Google</span><span>Oct 2024</span></li>
+      <li><span>Introduction to Agile Development and Scrum — Coursera</span><span>Jul 2024</span></li>
+      <li><span>Generative AI: Introduction to LLMs; Generative and Predictive AI (3 courses) — LinkedIn</span><span>Jul 2025</span></li>
+      <li><span>Postman and API Testing; OAuth 2.0 for API Security — Udemy</span><span>Oct 2023</span></li>
+      <li><span>Linux System Administrator — GALILEU</span><span>Oct 2014</span></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="edu">
+    <h2 id="edu">Education and languages</h2>
+    <p class="lead">Escola Secundária do Cerco do Porto.<br>Portuguese: native. English: full professional proficiency.</p>
+  </section>
+
+  <footer>Last updated September 2026.</footer>
+</main>
+</body>
+</html>
