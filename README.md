@@ -1,6 +1,6 @@
 # José Silva
 
-**IT Operations Engineer · Application Support L2/L3 · Moving into DevOps**
+**Aplication support Engineer · Application Support L2/L3 **
 Porto, Portugal · [LinkedIn](https://www.linkedin.com/in/jpintosilva) · [CV (PDF)](Jose_Silva_CV_DevOps.pdf)
 
 I have spent 20+ years in technical support, service desk and application support. Today I work at Siemens alongside a development team on a customer application, investigating incidents with SQL and REST APIs. I am now moving into DevOps and looking for DevOps, Platform or Production Support Engineer roles.
